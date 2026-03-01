@@ -548,13 +548,19 @@ header h1 {
   }
 
   header {
-    padding: 1rem 0.5rem;
+    padding: 1rem 0.3rem;        /* reduced horizontal padding */
     border-radius: 1rem 1rem 0 0;
+    overflow: hidden;             /* safety clip */
   }
 
   .school-name {
     flex-wrap: nowrap; /* keep logo and name on same line */
     justify-content: center;
+  }
+
+  .school-name > div:last-child { /* the div containing the h1 */
+    flex: 1;                       /* take remaining space */
+    min-width: 0;                  /* allow shrinking */
   }
 
   .school-name img {
