@@ -333,4 +333,328 @@ header h1 {
       height: 300px;
       border-radius: 0.5rem;
     }
-    
+/* ========== MEDIA QUERIES FOR RESPONSIVENESS ========== */
+
+/* Tablet and smaller */
+@media screen and (max-width: 1024px) {
+  /* Adjust header to keep it from breaking awkwardly */
+  header {
+    padding: 2rem 1rem;
+  }
+
+  .school-name {
+    gap: 0.5rem;
+  }
+
+  .school-name img {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+    -webkit-text-stroke: 0.1rem var(--accent-color);
+  }
+
+  .motto {
+    font-size: 1rem;
+  }
+
+  .nav-links {
+    gap: 1rem;
+    flex-wrap: nowrap; /* keep nav in one line */
+    overflow-x: auto;   /* allow scroll if needed */
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 0.5rem;
+  }
+
+  .nav-links a {
+    font-size: 0.95rem;
+    white-space: nowrap;
+  }
+
+  /* Hero image responsive */
+  .hero img {
+    width: 100%;
+    height: auto;
+    max-height: 30rem;
+    object-fit: cover;
+  }
+
+  /* Service cards adjustments */
+  .service-grid {
+    gap: 1.5rem;
+  }
+
+  .service-card img,
+  .contact-card img {
+    width: 100%;
+    height: auto;
+    max-height: 14rem;
+    object-fit: cover;
+  }
+
+  /* Footer adjustments */
+  .mails, .phone {
+    width: 80%;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    overflow-x: auto;
+    gap: 1rem;
+  }
+
+  .admin {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .admin-thumbnail {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .admin-thumbnail img {
+    width: 50%;
+    height: auto;
+    max-height: 250px;
+  }
+
+  .about-admin {
+    width: 100%;
+  }
+
+  .about-admin p {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .contact-address a {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile landscape and small tablets */
+@media screen and (max-width: 768px) {
+  header {
+    padding: 1.5rem 0.8rem;
+  }
+
+  .school-name img {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  header h1 {
+    font-size: 1.4rem;
+  }
+
+  .motto {
+    font-size: 0.9rem;
+  }
+
+  .nav-links {
+    gap: 0.8rem;
+  }
+
+  .nav-links a {
+    font-size: 0.85rem;
+  }
+
+  .hero img {
+    max-height: 25rem;
+  }
+
+  .section {
+    padding: 1.5rem 1rem;
+  }
+
+  .section h2 {
+    font-size: 1.8rem;
+  }
+
+  .service-intro,
+  .contact-note,
+  #about p,
+  .section-career p {
+    width: 95%;
+    font-size: 0.95rem;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr; /* stack into 3 rows as requested */
+    gap: 2rem;
+  }
+
+  .service-card,
+  .contact-card {
+    padding: 1rem;
+  }
+
+  .service-card img,
+  .contact-card img {
+    max-height: 18rem;
+  }
+
+  .contact-address {
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-address p {
+    width: 100%;
+  }
+
+  .mails, .phone {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    white-space: normal; /* allow wrapping for better readability */
+    overflow-x: visible;
+    gap: 0.3rem;
+  }
+
+  .phone p, .mails p {
+    margin: 0.2rem 0;
+  }
+
+  .admin {
+    flex-direction: column;
+  }
+
+  .admin-thumbnail img {
+    width: 70%;
+    max-height: 220px;
+  }
+
+  .about-admin p {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  .section-career a {
+    font-size: 1.2rem;
+  }
+
+  .section-career a:hover {
+    font-size: 1.3rem;
+  }
+}
+
+/* Mobile portrait */
+@media screen and (max-width: 480px) {
+  body {
+    padding: 0.5rem;
+  }
+
+  header {
+    padding: 1rem 0.5rem;
+    border-radius: 1rem 1rem 0 0;
+  }
+
+  .school-name {
+    flex-wrap: nowrap; /* keep logo and name on same line */
+    justify-content: center;
+  }
+
+  .school-name img {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  header h1 {
+    font-size: 1rem;
+    -webkit-text-stroke: 0.05rem var(--accent-color);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .motto {
+    font-size: 0.75rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .nav-links {
+    gap: 0.5rem;
+    justify-content: center;
+  }
+
+  .nav-links a {
+    font-size: 0.7rem;
+    padding: 0.2rem 0;
+  }
+
+  .hero img {
+    max-height: 18rem;
+  }
+
+  .section h2 {
+    font-size: 1.5rem;
+  }
+
+  .service-card h3,
+  .contact-card h5 {
+    font-size: 1.2rem;
+  }
+
+  .service-card p,
+  .contact-card p,
+  .service-intro,
+  .contact-note {
+    font-size: 0.85rem;
+    width: 100%;
+  }
+
+  .service-card img,
+  .contact-card img {
+    max-height: 14rem;
+  }
+
+  .contact-address a {
+    font-size: 0.9rem;
+    word-break: break-all;
+  }
+
+  footer.mainFooter {
+    padding: 1rem 0.5rem;
+    border-radius: 0 0 1rem 1rem;
+  }
+
+  .copy span {
+    font-size: 1rem;
+  }
+
+  .copy p {
+    font-size: 0.8rem;
+  }
+
+  .mails p,
+  .phone p {
+    font-size: 0.8rem;
+    white-space: nowrap;
+  }
+
+  .admin-thumbnail img {
+    width: 80%;
+    max-height: 180px;
+  }
+
+  .about-admin h3 {
+    font-size: 1.2rem;
+  }
+
+  .about-admin p {
+    font-size: 0.8rem;
+  }
+
+  .section-career a {
+    font-size: 1rem;
+  }
+
+  .section-career a:hover {
+    font-size: 1.1rem;
+  }
+}
